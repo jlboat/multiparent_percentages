@@ -1,5 +1,8 @@
 # Multiparent percentages
 
+Assess unique parental contribution to multiparent RILs
+
+```bash
 usage: mpp_percentages.py [-h] --variants VARIANTS --progeny-substring PROGENY_SUBSTRING --parent-substrings PARENT_SUBSTRINGS 
                                [--subset-size SUBSET_SIZE] [--output OUTPUT] [--multiallelic] 
 
@@ -18,3 +21,11 @@ required arguments:
                 The substring present in all progeny
     --parent-substrings PARENT_SUBSTRINGS
                 The substrings present in each parent -- comma separated 
+```
+
+## Examples
+RIL Example
+![RIL](./images/RIL.barplot.png?raw=true "RIL")
+
+MAGIC Example
+![MAGIC](./images/MAGIC.barplot.png?raw=true "MAGIC")
