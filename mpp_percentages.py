@@ -95,7 +95,7 @@ def write_subset(snp_subset):
 
 
 def get_parent_percentages(uniq_snp_to_parent_df, parent_labels):
-    parent_percentages = pd.DataFrame(columns=parent_labels)
+    parent_percentages = pd.DataFrame(columns=parent_labels, dtype=object)
     fast_snp_parent_dictionary = OrderedDict()
     for variant_name in list(uniq_snp_to_parent_df.index):
         series = uniq_snp_to_parent_df.loc[variant_name, ]
@@ -112,13 +112,15 @@ def get_parent_percentages(uniq_snp_to_parent_df, parent_labels):
 
 def plot_percentages_sorted_by_parent(df, sort_parent, output):
     """Given dataframe of percentage and parent to sort by, generate figure"""
-    df.sort_values(by=sort_parent).plot(kind="bar", stacked=True, edgecolor="none", width=1.0)
+    df.sort_values(by=sort_parent).plot(kind="bar", stacked=True, edgecolor="none", width=1.0).legend(
+            loc="center left", bbox_to_anchor=(1, 0.5))
     plt.tick_params(
         axis='x',           # changes apply to the x-axis
         which='both',       # both major and minor ticks are affected
         bottom=False,       # ticks along the bottom edge are off
         top=False,          # ticks along the top edge are off
         labelbottom=False)  # labels along the bottom edge are off
+    plt.tight_layout()
     plt.savefig(output)
 
 
