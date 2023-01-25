@@ -24,8 +24,10 @@ required arguments:
 ```
 
 ## Examples
-RIL Example
+RIL Example  
+
 ![RIL](./images/RIL.barplot.png?raw=true "RIL")
 
-MAGIC Example
+MAGIC Example  
+
 ![MAGIC](./images/MAGIC.barplot.png?raw=true "MAGIC")

@@ -120,6 +120,9 @@ def plot_percentages_sorted_by_parent(df, sort_parent, output):
         bottom=False,       # ticks along the bottom edge are off
         top=False,          # ticks along the top edge are off
         labelbottom=False)  # labels along the bottom edge are off
+    plt.ylim(0,1)
+    plt.xlabel("RILs")
+    plt.ylabel("Parent Percent Contribution")
     plt.tight_layout()
     plt.savefig(output)
 
